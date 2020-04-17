@@ -96,7 +96,7 @@ public class MaxPairwiseDistance {
 
         for (int iteration = 1; iteration < sqrt_of_N; iteration++) {
             int finalIteration = iteration;
-                    rdd = rdd.flatMapToPair((t) -> {
+            rdd = rdd.flatMapToPair((t) -> {
                         if (t._1 >= 0) {
                             return Stream.of(Tuple2.apply(t._1, Tuple2.apply(t._2, true)),
                                     Tuple2.apply((t._1 + finalIteration) % sqrt_of_N, Tuple2.apply(t._2, false)))
