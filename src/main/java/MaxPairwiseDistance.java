@@ -94,7 +94,7 @@ public class MaxPairwiseDistance {
                     return values.iterator();
                 });
 
-        for (int iteration = 0; iteration < sqrt_of_N; iteration++) {
+        for (int iteration = 1; iteration < sqrt_of_N; iteration++) {
             int finalIteration = iteration;
                     rdd = rdd.flatMapToPair((t) -> {
                         if (t._1 >= 0) {
