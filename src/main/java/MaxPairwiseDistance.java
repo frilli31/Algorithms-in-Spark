@@ -17,7 +17,8 @@ public class MaxPairwiseDistance {
     public static void main(String[] args) throws IOException {
 
         SparkConf conf = new SparkConf(true)
-                .setAppName("Homework1");
+                .setMaster("local[*]")
+                .setAppName("MaxPairwiseDistance");
         JavaSparkContext sc = new JavaSparkContext(conf);
         sc.setLogLevel("WARN");
 
