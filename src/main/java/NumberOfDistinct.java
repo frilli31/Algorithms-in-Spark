@@ -54,10 +54,5 @@ public class NumberOfDistinct {
                 .reduce(Long::sum);
 
         System.out.println("Number of Distinct in R = O(1), M_L = O(N^1/2), M_A = (N): " + distinct);
-
-
-        /// Average in R = O(1), M_L = O(N^1/2), M_A = (N)
-
-
     }
 }
